@@ -1,9 +1,10 @@
+import KeenShlider from "../KeenShlider/KeenShlider";
 
 
 const Home = () => {
     return (
         <div className="" >
-            its home
+          <KeenShlider/>
         </div>
     );
 };

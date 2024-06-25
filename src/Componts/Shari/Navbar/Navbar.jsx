@@ -39,7 +39,7 @@ const Navbar = () => {
 
     return (
         <div>
-  <div className="navbar bg-base-100">
+  <div className="navbar bg-white fixed z-10 bg-opacity-70">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -66,7 +66,7 @@ const Navbar = () => {
         
       </ul>
     </div>
-     <Link>
+     <Link to='/' >
      <h1 className=" text-3xl" > <span className=" text-6xl font-bold text-fuchsia-400" >
       B</span><span className=" shadow-2xl shadow-rose-900 font-bold" >ike World</span> </h1>
      </Link>
