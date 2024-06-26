@@ -1,10 +1,14 @@
+import BikeNews from "../BikeNews/BikeNews";
 import KeenShlider from "../KeenShlider/KeenShlider";
+
 
 
 const Home = () => {
     return (
-        <div className="" >
+        <div>
           <KeenShlider/>
+
+        <BikeNews/>
         </div>
     );
 };
