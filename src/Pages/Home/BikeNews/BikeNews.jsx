@@ -5,7 +5,7 @@ const BikeNews = () => {
 
           
 
-<section className="px-5 py-10  bg-gray-50 dark:text-gray-800">
+<section className="px-5 py-10   dark:text-gray-800">
         <div className="container grid grid-cols-12 mx-auto gap-y-6 md:gap-10">
             <div className="flex flex-col justify-between col-span-12 py-2 space-y-8 md:space-y-16 md:col-span-3">
                 <div className="flex flex-col space-y-8 md:space-y-12">
@@ -54,11 +54,11 @@ const BikeNews = () => {
 
 
             <div className="hidden py-2 xl:col-span-3 lg:col-span-4 md:hidden lg:block">
-                <div className="mb-8 space-x-5 border-b-2 border-opacity-10 dark:border-violet-600 text-center">
+                <div className="mb-8 space-x-5 border-b-2 border-opacity-10 dark:border-violet-700 text-center">
                     
                     <button type="button" className="pb-5 uppercase border-b-2 dark:border- dark:text-gray-600 font-extrabold ">Popular</button>
                 </div>
-                <div className="flex flex-col divide-y dark:divide-gray-300">
+                <div className="flex flex-col divide-y dark:divide-violet-700">
                     <div className="flex px-1 py-4">
                         <img alt="" className="flex-shrink-0 object-cover w-24 h-24 rounded-md mr-4 dark:bg-gray-500" src="https://i.ibb.co/qdjcgP0/view-cool-powerful-motorcycle.jpg" />
                         <div className="flex flex-col flex-grow">

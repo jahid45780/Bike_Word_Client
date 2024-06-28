@@ -11,7 +11,7 @@ const Navbar = () => {
   <div className=" group  flex cursor-pointer flex-col" >
      
      <Link to='/' > <li className=" text-2xl mx-2 mt-2 text-center text-black" > Home </li> </Link>
-         <span> <FaHome className=" text-3xl lg:ml-5 ml-28" /> </span>
+         <span> <FaHome className=" text-3xl lg:ml-6 ml-28" /> </span>
          <span className="h-[3px] w-0 rounded-full bg-black  transition-all duration-300 group-hover:w-full text-center" ></span>
          </div>
 
@@ -19,7 +19,7 @@ const Navbar = () => {
          <div className=" group  flex cursor-pointer flex-col" >
      
      <Link to='/' > <li className=" text-2xl mx-2 mt-2 text-black text-center" > About </li> </Link>
-        <span> <MdRoundaboutRight className=" text-3xl lg:ml-5 ml-28" /> </span>
+        <span> <MdRoundaboutRight className=" text-3xl lg:ml-7 ml-28" /> </span>
          <span className="h-[3px] w-0 rounded-full bg-black   transition-all duration-300 group-hover:w-full" ></span>
          </div>
 
@@ -27,7 +27,7 @@ const Navbar = () => {
          <div className=" group  flex cursor-pointer flex-col" >
      
      <Link to='/' > <li className=" text-2xl mx-2 mt-2 text-center text-black" > Service </li> </Link>
-     <span> <FaServicestack className=" text-3xl lg:ml-5 ml-28" /> </span>
+     <span> <FaServicestack className=" text-3xl lg:ml-8 ml-28" /> </span>
          <span className="h-[3px] w-0 rounded-full bg-black   transition-all duration-300 group-hover:w-full" ></span>
          </div>
 
