@@ -80,7 +80,7 @@ const Navbar = () => {
   </div>
   <div className="navbar-end">
    
-<PiUserSwitchThin className=" text-5xl" />
+ <Link to='/login' > <PiUserSwitchThin className=" text-5xl" /> </Link>
     
   </div>
 </div>          
