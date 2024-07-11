@@ -35,9 +35,9 @@ const BikeNews = () => {
             </div>
 
                {/* i video */}
-            <div className=" bg-center bg-no-repeat bg-cover xl:col-span-6 lg:col-span-5 md:col-span-9 min-h-96" >
+            <div className=" bg-center bg-no-repeat bg-cover xl:col-span-6 lg:col-span-5 md:col-span-9 min-h-96 lg:ml-24 -ml-3 " >
            
-           <h1 className="pb-5 uppercase border-b-2 dark:border- dark:text-gray-600 font-extrabold " > Popular Services </h1>
+           <h1 className="pb-5 uppercase  dark:text-gray-600 font-extrabold " > Popular Services </h1>
 
 
             <p>

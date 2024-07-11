@@ -15,7 +15,7 @@ const BrandCard = ({brandCard}) => {
     
 
     
-    <Link>
+    <Link to={`/product/${brand}`}>
            <h1 className=' flex gap-2 justify-center items-center text-2xl mt-3' > <RiMotorbikeFill className='animate-bounce text-4xl' /> <span className=' font-bold text-3xl' > {brand} </span> </h1>
     </Link>
     

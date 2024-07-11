@@ -1,3 +1,5 @@
+
+import ThreeDCardDemo from "../../../components/Vortex/imgCar";
 import BikeNews from "../BikeNews/BikeNews";
 import Brand from "../Brand/Brand";
 import KeenShlider from "../KeenShlider/KeenShlider";
@@ -11,6 +13,7 @@ const Home = () => {
 
         <BikeNews/>
         <Brand/>
+     <ThreeDCardDemo/>
         </div>
     );
 };

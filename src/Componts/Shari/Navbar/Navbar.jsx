@@ -5,11 +5,13 @@ import { FaServicestack } from "react-icons/fa";
 import { PiUserSwitchThin } from "react-icons/pi";
 import useAuth from "../../../api/useAuth";
 import toast from "react-hot-toast";
+import { LuShoppingCart } from "react-icons/lu";
+import Usecard from "../../../Pages/BikeCard/Usecard";
 const Navbar = () => {
 
 
   const { user, logOut } = useAuth()
-
+  const [cart] = Usecard()
   const handleLogOut = ()=>{
     logOut()
     .then(()=>{})
@@ -91,8 +93,14 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-   
-
+   {/*shpoing card  */}
+<div>
+<button className="btn">
+  <LuShoppingCart className=" text-lg" />
+  <div className="badge badge-secondary">+{cart.length}</div>
+</button>
+    
+</div>
 
 
  {
