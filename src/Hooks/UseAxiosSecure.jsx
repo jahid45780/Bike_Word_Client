@@ -6,6 +6,15 @@ const axiosSecure = axios.create({
 })
 
 const UseAxiosSecure = () => {
+   axiosSecure.interceptors.request.use(function(config){
+     
+     const  token = localStorage.getItem('assess-token')
+     console.log(token);
+     config.headers.authorization = `Bearer ${token}`
+       return config
+   },function(err){
+      return Promise.reject(err)
+   })
      return axiosSecure
 };
 

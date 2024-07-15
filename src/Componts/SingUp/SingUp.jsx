@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { imageUpload } from "../../api/utils";
 import useAuth from "../../api/useAuth";
 import toast from "react-hot-toast";
+import { saveUser } from "../../api/auth";
 
 const SingUp = () => {
 
@@ -29,8 +30,8 @@ const SingUp = () => {
           // save user name and photo url
            await updateUserProfile(name,imageData?.data?.display_url)
           // server user data in database
-        //   const dbResponse = await saveUser(result?.user)
-        //   console.log(dbResponse);
+          const dbResponse = await saveUser(result?.user)
+          console.log(dbResponse);
           // result.user.email
           // access token 
           //  await getToken(result?.user?.email)
@@ -53,7 +54,7 @@ const SingUp = () => {
 	const result = await signInWithGoogle()   
 
 	// server user data in database
-	// const dbResponse = await saveUser(result?.user)
+	const dbResponse = await saveUser(result?.user)
   
 	// access token 
 	//  await getToken(result?.user?.email)

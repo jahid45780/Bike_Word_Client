@@ -12,6 +12,7 @@ import {
   updateProfile,
 } from 'firebase/auth'
 import { app } from '../firebase/firebase.config'
+import UseAxiosPublic from '../Hooks/AxiosPublic'
 
 
 
@@ -23,6 +24,7 @@ const googleProvider = new GoogleAuthProvider()
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null)
   const [loading, setLoading] = useState(true)
+  const axiosPublic = UseAxiosPublic()
 
   const createUser = (email, password) => {
     setLoading(true)
@@ -61,13 +63,25 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, currentUser => {
       setUser(currentUser)
-      console.log('CurrentUser-->', currentUser)
+      if(currentUser){
+        // 
+        const userInfo = {email: currentUser.email}
+        axiosPublic.post('/jwt', userInfo )
+        .then(res=>{
+          if(res.data.token){
+            localStorage.setItem('assess-token', res.data.token)
+          }
+        })
+      }else{
+        // 
+        localStorage.removeItem('remove token')
+      }
       setLoading(false)
     })
     return () => {
       return unsubscribe()
     }
-  }, [])
+  }, [axiosPublic])
 
   const authInfo = {
     user,

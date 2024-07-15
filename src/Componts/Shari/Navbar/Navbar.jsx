@@ -95,10 +95,14 @@ const Navbar = () => {
   <div className="navbar-end">
    {/*shpoing card  */}
 <div>
+<Link to='/dashboard/cart' >
+
 <button className="btn">
   <LuShoppingCart className=" text-lg" />
   <div className="badge badge-secondary">+{cart.length}</div>
 </button>
+
+</Link>
     
 </div>
 

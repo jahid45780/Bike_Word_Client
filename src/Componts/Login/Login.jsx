@@ -1,6 +1,7 @@
 import toast from "react-hot-toast";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../api/useAuth";
+import { saveUser } from "../../api/auth";
 
 const Login = () => {
 
@@ -24,8 +25,8 @@ const Login = () => {
 			const result = await signIn(email,password)
 		
 			// server user data in database
-			// const dbResponse = await saveUser(result?.user)
-			// console.log(dbResponse);
+			const dbResponse = await saveUser(result?.user)
+			console.log(dbResponse);
 			// access token 
 			//  await getToken(result?.user?.email)
 			navigate(from,{replace:true} )
@@ -43,7 +44,7 @@ const Login = () => {
 	const result = await signInWithGoogle()   
 
 	// server user data in database
-	// const dbResponse = await saveUser(result?.user)
+	const dbResponse = await saveUser(result?.user)
   
 	// access token 
 	//  await getToken(result?.user?.email)
