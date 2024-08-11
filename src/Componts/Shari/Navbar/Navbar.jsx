@@ -32,7 +32,7 @@ const Navbar = () => {
 
          <div className=" group  flex cursor-pointer flex-col" >
      
-     <Link to='/' > <li className=" text-2xl mx-2 mt-2 text-black text-center" > About </li> </Link>
+     <Link to='/about' > <li className=" text-2xl mx-2 mt-2 text-black text-center" > About </li> </Link>
         <span> <MdRoundaboutRight className=" text-3xl lg:ml-7 ml-28" /> </span>
          <span className="h-[3px] w-0 rounded-full bg-black   transition-all duration-300 group-hover:w-full" ></span>
          </div>
@@ -40,7 +40,7 @@ const Navbar = () => {
 
          <div className=" group  flex cursor-pointer flex-col" >
      
-     <Link to='/' > <li className=" text-2xl mx-2 mt-2 text-center text-black" > Service </li> </Link>
+     <Link to='/service' > <li className=" text-2xl mx-2 mt-2 text-center text-black" > Service </li> </Link>
      <span> <FaServicestack className=" text-3xl lg:ml-8 ml-28" /> </span>
          <span className="h-[3px] w-0 rounded-full bg-black   transition-all duration-300 group-hover:w-full" ></span>
          </div>
@@ -53,7 +53,7 @@ const Navbar = () => {
 
     return (
         <div>
-  <div className="navbar bg-white fixed z-10 bg-opacity-70">
+  <div className="navbar bg-white fixed z-10 bg-opacity-70 hover:bg-red-100">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

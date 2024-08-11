@@ -72,11 +72,19 @@ const Sidebar = () => {
          </div>
 
          <div className=' text-lg bg-orange-300 text-center p-2 rounded-xl mt-2' >
+          <NavLink to='/dashboard/allBike' > All Bike </NavLink> 
+         </div>
+
+         <div className=' text-lg bg-orange-300 text-center p-2 rounded-xl mt-2' >
           <NavLink to='/dashboard/cart' > MY Booking Bike  </NavLink> 
          </div>
 
          <div className=' text-lg bg-orange-300 text-center p-2 rounded-xl mt-2' >
           <NavLink to='/dashboard/addProduct' > Add Product </NavLink> 
+         </div>
+
+         <div className=' text-lg bg-orange-300 text-center p-2 rounded-xl mt-2' >
+          <NavLink to='/dashboard/addBrand' > Add Brand </NavLink> 
          </div>
              
            </> :

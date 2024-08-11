@@ -15,6 +15,12 @@ import Cart from "../Pages/Dashboard/Cart/Cart";
 import AllUser from "../Pages/Dashboard/AllUser/AllUser";
 import AddProduct from "../Pages/Dashboard/AddProduct/AddProduct";
 import Profile from "../Componts/Shari/Profile/Profile";
+import About from "../Pages/About/About";
+import Service from "../Pages/Service/Service";
+import AllBike from "../Pages/Dashboard/AllBike/AllBike";
+import AddBrand from "../Pages/Dashboard/AddBrand/AddBrand";
+import PaymentSuccess from "../Pages/Dashboard/PaymentSuccess/PaymentSuccess";
+import PaymentFail from "../Pages/Dashboard/PaymentSuccess/PaymentFail";
 
 
   export const router = createBrowserRouter([
@@ -44,9 +50,26 @@ import Profile from "../Componts/Shari/Profile/Profile";
         {
           path:'/signup',
           element:<SingUp></SingUp>
-        }
+        },
+        {
+          path:'/about',
+          element:<About></About>
+        },
+        {
+          path:'/service',
+          element:<Service></Service>
+        },
+        {
+          path:'/payment/success/:tranId',
+          element:<PaymentSuccess></PaymentSuccess>
+        },
+        {
+          path:'/payment/fail/:tranId',
+          element:<PaymentFail></PaymentFail>
+        },
       ]
     },
+    // dashboard Route
     {
       path:'dashboard',
       element:<Dashboard></Dashboard>,
@@ -62,6 +85,14 @@ import Profile from "../Componts/Shari/Profile/Profile";
       {
         path:'addProduct',
         element:<AddProduct></AddProduct>
+      },
+      {
+        path:'allBike',
+        element:<AllBike></AllBike>
+      },
+      {
+        path:'addBrand',
+        element:<AddBrand></AddBrand>
       },
       {
         path:'profile',

@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 
 const AllUser = () => {
 
-    const axiosSecure = UseAxiosSecure()
+  const axiosSecure = UseAxiosSecure()
 
     const {data: users= [], refetch} = useQuery({
          queryKey:['users'],
@@ -43,14 +43,14 @@ const AllUser = () => {
             ));
        }
     })
-
-    
 }
 
 
     return (
         <div>
-            alll user{users.length}
+
+          <h1 className=" text-4xl text-center font-medium mt-3" > Admin Panel </h1>
+           
 
 
             <div className="overflow-x-auto">

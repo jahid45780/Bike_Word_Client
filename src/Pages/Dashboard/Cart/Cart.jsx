@@ -3,14 +3,18 @@ import { LampDemo } from "../../../components/lamp/lamp";
 import Usecard from "../../BikeCard/Usecard";
 import UseAxiosSecure from "../../../Hooks/UseAxiosSecure";
 import toast from "react-hot-toast";
+import useAuth from "../../../api/useAuth";
+
 
 
 const Cart = () => {
 
     const [cart, refetch] = Usecard()
+    const {user} = useAuth()
 
     const totalPrice = cart.reduce((total, item)=> total +item.price,0)
     const axiosSecure = UseAxiosSecure()
+   
 
     const handleDelete = id =>{
           axiosSecure.delete(`/carts/${id}`)
@@ -30,13 +34,38 @@ const Cart = () => {
           refetch()
     }
 
+    const handleCreatePayment = ()=>{
+        axiosSecure.post('/create-payment',{
+           amount:totalPrice,
+           name:user?.displayName,
+           email:user?.email,
+           currency:'BDT'
+        }
+      )
+
+      
+        
+         .then((response)=>{
+           
+            // window.location.replace(PaymentUrl)
+            // console.log(response);
+            const retUrl = response.data.PaymentUrl
+
+            if(retUrl){
+              window.location.replace(retUrl)
+            }
+        })
+    }
+
     return (
         <div>
             <LampDemo/>
             <div className=" grid lg:grid-cols-3 grid-cols-2 mt-3 items-center justify-around " >
             <h1 className=" text-2xl font-bold text-black" >  My Booking bike {cart.length} </h1>
             <p className="text-2xl font-bold text-black" > Total {totalPrice} $ </p>
-            <button className=" btn text-2xl font-bold text-black" > Pay Bil </button>
+            <button
+             onClick={handleCreatePayment}
+             className=" btn text-2xl font-bold text-black" > Pay Bil </button>
             </div>
 
             <div className="overflow-x-auto  ">
@@ -84,7 +113,7 @@ const Cart = () => {
             </th>
           </tr> )
       }
-     
+        
      
     </tbody>
     
